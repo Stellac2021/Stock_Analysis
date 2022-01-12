@@ -13,17 +13,17 @@ The stock data used in this project are 12 stock information from 2017 and 2018 
 Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
 
 ### Analysis
- - **Before** Original script running time 
+ - **Original script** running time 
 
  ![](Resources/Original_scirpt_2017.png)
  ![](Resources/Original_scirpt_2018.png)
  
- - **After** Refactored script running time 
+ - **Refactored script** running time 
  
  ![](Resources/VBA_Challenge_2017.png)
  ![](Resources/VBA_Challenge_2018.png)
 
- 
+:point_right: Above is the comparison of program run time comparison between original script and refactored script. As shown in the images, the run time has decreased a lot after code refactoring. 
     
 
 
