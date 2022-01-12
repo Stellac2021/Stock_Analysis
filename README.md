@@ -35,21 +35,22 @@ The main refactored area was the loop section.
          '5) loop through rows in the data
           Worksheets("2018").Activate
           For j = 2 To RowCount
-            '5a) Get total volume for current ticker
+          '5a) Get total volume for current ticker
              If Cells(j, 1).Value = ticker Then
 
                 totalVolume = totalVolume + Cells(j, 8).Value
            End If
-            '5b) get starting price for current ticker
+          5b) get starting price for current ticker
              If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
                startingPrice = Cells(j, 6).Value
              End If
-            '5c) get ending price for current ticker
+          '5c) get ending price for current ticker
             If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
                endingPrice = Cells(j, 6).Value
            End If
+           
      - **Refactored script** 
-         ''2a) Create a for loop to initialize the tickerVolumes to zero.
+    ''2a) Create a for loop to initialize the tickerVolumes to zero.
     
     For i = 0 To 11
         tickerVolumes(i) = 0
