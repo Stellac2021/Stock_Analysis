@@ -93,6 +93,7 @@ As shown in the images, the run time is more than 10 times faster after code ref
             tickerIndex = tickerIndex + 1
                 
         End If
+      Next i 
 ```
 ## Summary
 Based on the above analysis and results, we can see that code refactoring helps us to review our code and lead to better quality code. But it also comes with some advantages and disadvantages. 
