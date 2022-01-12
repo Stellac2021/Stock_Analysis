@@ -67,32 +67,32 @@ As shown in the images, the run time is more than 10 times faster after code ref
 - **Refactored script** in loop section
 ```
 ''2a) Create a for loop to initialize the tickerVolumes to zero.
-
-For i = 0 To 11
-tickerVolumes(i) = 0
-
-Next i
-
-''2b) Loop over all the rows in the spreadsheet.
-For i = 2 To RowCount
-
-'3a) Increase volume for current ticker
-    tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
-
-'3b) Check if the current row is the first row with the selected tickerIndex.
-    If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
-        tickerStartingPrices(tickerIndex) = Cells(i, 6)
-
-    End If
-
-'3c) check if the current row is the last row with the selected ticker
-'If the next row's ticker doesn't match, increase the tickerIndex.
-    If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
-        tickerEndingPrices(tickerIndex) = Cells(i, 6)
-    '3d Increase the tickerIndex.
-        tickerIndex = tickerIndex + 1
-
-End If
+    
+    For i = 0 To 11
+        tickerVolumes(i) = 0
+        
+    Next i
+        
+    ''2b) Loop over all the rows in the spreadsheet.
+    For i = 2 To RowCount
+    
+        '3a) Increase volume for current ticker
+        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+        
+        '3b) Check if the current row is the first row with the selected tickerIndex.
+        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
+            tickerStartingPrices(tickerIndex) = Cells(i, 6)
+            
+        End If
+        
+        '3c) check if the current row is the last row with the selected ticker
+        'If the next row's ticker doesn't match, increase the tickerIndex.
+        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(i, 6)
+            '3d Increase the tickerIndex.
+            tickerIndex = tickerIndex + 1
+                
+        End If
 ```
 ## Summary
 Based on the above analysis and results, we can see that code refactoring helps us to review our code and lead to better quality code. But it also comes with some advantages and disadvantages. 
