@@ -26,57 +26,56 @@ Using images and examples of your code, compare the stock performance between 20
 :point_right: Above is the comparison of program run time comparison between original script and refactored script. As shown in the images, the run time is more than 10 times faster after code refactoring. 
 
 The main refactored area was the loop section. 
-  - **Original script**
-        '4)Loop through the tickers
-         For i = 0 To 11
-         ticker = tickers(i)
-         totalVolume = 0 
-        
-         '5) loop through rows in the data
-          Worksheets("2018").Activate
-          For j = 2 To RowCount
-          '5a) Get total volume for current ticker
-             If Cells(j, 1).Value = ticker Then
+- **Original script**
+'4)Loop through the tickers
+For i = 0 To 11
+    ticker = tickers(i)
+    totalVolume = 0 
 
-                totalVolume = totalVolume + Cells(j, 8).Value
-           End If
-          5b) get starting price for current ticker
-             If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
-               startingPrice = Cells(j, 6).Value
-             End If
-          '5c) get ending price for current ticker
-            If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
-               endingPrice = Cells(j, 6).Value
-           End If
-           
-     - **Refactored script** 
-    ''2a) Create a for loop to initialize the tickerVolumes to zero.
-    
-    For i = 0 To 11
-        tickerVolumes(i) = 0
-        
-    Next i
-        
-    ''2b) Loop over all the rows in the spreadsheet.
-    For i = 2 To RowCount
-    
-        '3a) Increase volume for current ticker
-        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
-        
-        '3b) Check if the current row is the first row with the selected tickerIndex.
-        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
-            tickerStartingPrices(tickerIndex) = Cells(i, 6)
-            
-        End If
-        
-        '3c) check if the current row is the last row with the selected ticker
-        'If the next row's ticker doesn't match, increase the tickerIndex.
-        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
-            tickerEndingPrices(tickerIndex) = Cells(i, 6)
-            '3d Increase the tickerIndex.
-            tickerIndex = tickerIndex + 1
-                
-        End If
+'5) loop through rows in the data
+Worksheets("2018").Activate
+    For j = 2 To RowCount
+'5a) Get total volume for current ticker
+If Cells(j, 1).Value = ticker Then
+    totalVolume = totalVolume + Cells(j, 8).Value
+End If
+'5b) get starting price for current ticker
+If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+    startingPrice = Cells(j, 6).Value
+End If
+'5c) get ending price for current ticker
+If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+    endingPrice = Cells(j, 6).Value
+End If
+
+- **Refactored script** 
+''2a) Create a for loop to initialize the tickerVolumes to zero.
+
+For i = 0 To 11
+tickerVolumes(i) = 0
+
+Next i
+
+''2b) Loop over all the rows in the spreadsheet.
+For i = 2 To RowCount
+
+'3a) Increase volume for current ticker
+    tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+
+'3b) Check if the current row is the first row with the selected tickerIndex.
+    If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
+        tickerStartingPrices(tickerIndex) = Cells(i, 6)
+
+    End If
+
+'3c) check if the current row is the last row with the selected ticker
+'If the next row's ticker doesn't match, increase the tickerIndex.
+    If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
+        tickerEndingPrices(tickerIndex) = Cells(i, 6)
+    '3d Increase the tickerIndex.
+        tickerIndex = tickerIndex + 1
+
+End If
 ## Summary
 
 What are the advantages or disadvantages of refactoring code?
