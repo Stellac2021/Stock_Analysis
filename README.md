@@ -10,7 +10,8 @@ The stock data used in this project are 12 stock information from 2017 and 2018 
 
 ## Results
 
-Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
+1. Below is the comparison of program run time comparison between original script and refactored script. As shown in the images, the run time is more than 10 times faster after code refactoring. 
+2. The main refactored area was the loop section as shown below. After the editing, the code looks cleaner and more organized.
 
 ### Analysis
  - **Original script** running time 
@@ -23,9 +24,7 @@ Using images and examples of your code, compare the stock performance between 20
  ![](Resources/VBA_Challenge_2017.png)
  ![](Resources/VBA_Challenge_2018.png)
 
-:point_right: Above is the comparison of program run time comparison between original script and refactored script. As shown in the images, the run time is more than 10 times faster after code refactoring. 
 
-The main refactored area was the loop section. 
 - **Original script**
 ```
 '4)Loop through the tickers
