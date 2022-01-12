@@ -6,7 +6,7 @@ An original VBA script was created to analyze stock information and the stock tr
 ### Purpose
 The purpose of this project is to examine whether refactored VBA script runs faster than the origianl VBA script.
 
-The stock data used in this project are 12 stock information from 2017 and 2018 including the stock tickers, ticke rvalue, stock issued date, starting price, closing price and stock trading volumes. 
+The stock data used in this project are 12 stocks information from 2017 and 2018, including the stock tickers, ticker value, stock issued date, starting price, closing price and stock trading volumes. 
 
 ## Results
 
