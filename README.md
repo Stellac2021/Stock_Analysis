@@ -29,25 +29,40 @@ As shown in the images, the run time is more than 10 times faster after code ref
 - **Original script** in loop section
 ```
 '4)Loop through the tickers
-For i = 0 To 11
-    ticker = tickers(i)
-    totalVolume = 0 
 
-'5) loop through rows in the data
-Worksheets("2018").Activate
-    For j = 2 To RowCount
-'5a) Get total volume for current ticker
-If Cells(j, 1).Value = ticker Then
-    totalVolume = totalVolume + Cells(j, 8).Value
-End If
-'5b) get starting price for current ticker
-If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
-    startingPrice = Cells(j, 6).Value
-End If
-'5c) get ending price for current ticker
-If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
-    endingPrice = Cells(j, 6).Value
-End If
+   For i = 0 To 11
+       ticker = tickers(i)
+       totalVolume = 0
+       
+        '5) loop through rows in the data
+       Worksheets("2018").Activate
+       For j = 2 To RowCount
+           '5a) Get total volume for current ticker
+           If Cells(j, 1).Value = ticker Then
+
+               totalVolume = totalVolume + Cells(j, 8).Value
+
+           End If
+           '5b) get starting price for current ticker
+           If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+
+               startingPrice = Cells(j, 6).Value
+
+           End If
+           '5c) get ending price for current ticker
+           If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+
+               endingPrice = Cells(j, 6).Value
+
+           End If
+       Next j
+       '6) Output data for current ticker
+       Worksheets("All Stock Analysis").Activate
+       Cells(4 + i, 1).Value = ticker
+       Cells(4 + i, 2).Value = totalVolume
+       Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
+
+   Next i
 ```
 - **Refactored script** in loop section
 ```
