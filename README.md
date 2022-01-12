@@ -13,12 +13,12 @@ The stock data used in this project are 12 stock information from 2017 and 2018 
 Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
 
 ### Analysis
- - Original script running time for 2017 & 2018 stock performance
- **Before**
+ - **Before** Original script running time 
+
  -  ![](Resources/Original_scirpt_2017.png)
  -  ![](Resources/Original_scirpt_2018.png)
- - Refactored script running time for 2017 & 2018 stock performance
- **After**
+ - **After** Refactored script running time 
+ 
 
  - Original script
     
