@@ -26,8 +26,9 @@ Using images and examples of your code, compare the stock performance between 20
 :point_right: Above is the comparison of program run time comparison between original script and refactored script. As shown in the images, the run time is more than 10 times faster after code refactoring. 
 
 The main refactored area was the loop section. 
-    '4)Loop through the tickers
-
+  - **Original script**
+    
+   '4)Loop through the tickers
      For i = 0 To 11
         ticker = tickers(i)
         totalVolume = 0
