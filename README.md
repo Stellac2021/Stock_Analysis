@@ -19,6 +19,7 @@ Using images and examples of your code, compare the stock performance between 20
  ![](Resources/Original_scirpt_2018.png)
  
  - **After** Refactored script running time 
+ 
  ![](Resources/VBA_Challenge_2017.png)
  ![](Resources/VBA_Challenge_2018.png)
 
