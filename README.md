@@ -79,8 +79,10 @@ For i = 2 To RowCount
 End If
 ```
 ## Summary
-
-What are the advantages or disadvantages of refactoring code?
-How do these pros and cons apply to refactoring the original VBA script?
+Based on the above analysis and results, we can see that code refactoring helps us to review our code and lead to better quality code. But it also comes with some advantages and disadvantages. 
 ### Advantages
+ -Refactoring makes the code easier to read and more organized
+ -Refactoring decrease programming run time
 ### Disadvantages
+ - Refactoring can be time consuming to do
+ - Refactoring may not be efficient when the script is too long
