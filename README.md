@@ -49,6 +49,33 @@ The main refactored area was the loop section.
                endingPrice = Cells(j, 6).Value
            End If
      - **Refactored script** 
+         ''2a) Create a for loop to initialize the tickerVolumes to zero.
+    
+    For i = 0 To 11
+        tickerVolumes(i) = 0
+        
+    Next i
+        
+    ''2b) Loop over all the rows in the spreadsheet.
+    For i = 2 To RowCount
+    
+        '3a) Increase volume for current ticker
+        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+        
+        '3b) Check if the current row is the first row with the selected tickerIndex.
+        If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
+            tickerStartingPrices(tickerIndex) = Cells(i, 6)
+            
+        End If
+        
+        '3c) check if the current row is the last row with the selected ticker
+        'If the next row's ticker doesn't match, increase the tickerIndex.
+        If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(i, 6)
+            '3d Increase the tickerIndex.
+            tickerIndex = tickerIndex + 1
+                
+        End If
 ## Summary
 
 What are the advantages or disadvantages of refactoring code?
