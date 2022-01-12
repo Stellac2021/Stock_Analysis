@@ -98,8 +98,8 @@ As shown in the images, the run time is more than 10 times faster after code ref
 ## Summary
 Based on the above analysis and results, we can see that code refactoring helps us to review our code and lead to better quality code. But it also comes with some advantages and disadvantages. 
 ### Advantages
- -Refactoring makes the code easier to read and more organized
- -Refactoring decrease programming run time
+ - Refactoring makes the code easier to read and more organized
+ - Refactoring decrease programming run time
 ### Disadvantages
  - Refactoring can be time consuming to do
  - Refactoring may not be efficient when the script is too long
