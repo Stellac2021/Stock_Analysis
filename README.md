@@ -31,8 +31,7 @@ The main refactored area was the loop section.
       '4)Loop through the tickers
        For i = 0 To 11
         ticker = tickers(i)
-        totalVolume = 0
-       
+        totalVolume = 0 
          '5) loop through rows in the data
           Worksheets("2018").Activate
           For j = 2 To RowCount
