@@ -25,7 +25,7 @@ The stock data used in this project are 12 stock information from 2017 and 2018 
  ![](Resources/VBA_Challenge_2018.png)
 
 
-- **Original script**
+- **Original script** in loop section
 ```
 '4)Loop through the tickers
 For i = 0 To 11
@@ -48,7 +48,7 @@ If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
     endingPrice = Cells(j, 6).Value
 End If
 ```
-- **Refactored script** 
+- **Refactored script** in loop section
 ```
 ''2a) Create a for loop to initialize the tickerVolumes to zero.
 
