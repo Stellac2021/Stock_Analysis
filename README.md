@@ -14,11 +14,11 @@ Using images and examples of your code, compare the stock performance between 20
 
 ### Analysis
  - Original script running time for 2017 & 2018 stock performance
- -  Before
+ **Before**
  -  ![](Resources/Original_scirpt_2017.png)
  -  ![](Resources/Original_scirpt_2018.png)
  - Refactored script running time for 2017 & 2018 stock performance
- -  After
+ **After**
 
  - Original script
     
