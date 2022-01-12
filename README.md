@@ -48,8 +48,7 @@ The main refactored area was the loop section.
             If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
                endingPrice = Cells(j, 6).Value
            End If
-      
-
+     - **Refactored script** 
 ## Summary
 
 What are the advantages or disadvantages of refactoring code?
