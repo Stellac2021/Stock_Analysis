@@ -100,4 +100,4 @@ Based on the above analysis and results, we can see that code refactoring helps 
 ### Advantages and Disadvantages of Code Refactoring in General
 Refactoring makes the code easier to read and more organized. It also helps decrease programming run time. On the other hand, the disadvantage of refactoring is that it can be time consuming to do and may not be efficient when the script is too long
 ### The Advantages of Refactoring Stock Analysis
-The biggest benefit that occurred as a result of the refactoring was an decrease in programming run time. As mentioned in the **Analysis** above, the run time is more than */10 times*/ faster after code refactoring.
+The biggest benefit that occurred as a result of the refactoring was an decrease in programming run time. As mentioned in the **Analysis** above, the run time is more than **10 times faster** after code refactoring.
