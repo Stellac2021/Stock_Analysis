@@ -27,6 +27,7 @@ Using images and examples of your code, compare the stock performance between 20
 
 The main refactored area was the loop section. 
 - **Original script**
+```
 '4)Loop through the tickers
 For i = 0 To 11
     ticker = tickers(i)
@@ -47,8 +48,9 @@ End If
 If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
     endingPrice = Cells(j, 6).Value
 End If
-
+```
 - **Refactored script** 
+```
 ''2a) Create a for loop to initialize the tickerVolumes to zero.
 
 For i = 0 To 11
@@ -76,6 +78,7 @@ For i = 2 To RowCount
         tickerIndex = tickerIndex + 1
 
 End If
+```
 ## Summary
 
 What are the advantages or disadvantages of refactoring code?
