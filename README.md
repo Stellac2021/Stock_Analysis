@@ -15,12 +15,14 @@ Using images and examples of your code, compare the stock performance between 20
 ### Analysis
  - **Before** Original script running time 
 
- -  ![](Resources/Original_scirpt_2017.png)
- -  ![](Resources/Original_scirpt_2018.png)
- - **After** Refactored script running time 
+ ![](Resources/Original_scirpt_2017.png)
+ ![](Resources/Original_scirpt_2018.png)
  
+ - **After** Refactored script running time 
+ ![](Resources/VBA_Challenge_2017.png)
+ ![](Resources/VBA_Challenge_2018.png)
 
- - Original script
+ 
     
 
 
